@@ -144,20 +144,25 @@ Use the removeFlavorByName function below to do the following:
 
   HINT: You can use .splice() for this
 */
+//function removeFlavorByName(array,flavor){
 // if (array.includes(flavor)) {
 //   return array.filter(_flavor => _flavor !== flavor);
 // }
-// return array;}
+// return array;
+//}
 //==========================================
+
 // function removeFlavorByName(array,flavor){
-//   let newArray = [...array];
-//   for (let i = 0; i < newArray.length; i++) {
-//     if (newArray.includes(flavor)) {
-//       newArray.splice(i, 1)
+//   const newArray=[];
+//   for(let i = 0; i < array.length; i++){
+//     if(array[i] !== flavor){
+//       newArray.push(array[i]);
 //     }
 //   }
-//   return newArray
-  //-------------------------------------
+//   return newArray;
+// }
+
+//===================================
    function removeFlavorByName(array,flavor){
    for (let i = 0; i < array.length; i++){
     if (array[i] === flavor){
@@ -192,10 +197,16 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(array, flavor){
+  const chocolateFlavors=[];
+  for( let i = 0; i < array.length; i++){
+    if (array[i].includes(flavor)){
+      chocolateFlavors.push(array[i]);
+    }
+  }
+  return chocolateFlavors;
 }
-
+console.log(filterByWord(originalFlavors, 'Chocolate'));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
