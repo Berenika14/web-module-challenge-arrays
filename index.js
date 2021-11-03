@@ -144,10 +144,31 @@ Use the removeFlavorByName function below to do the following:
 
   HINT: You can use .splice() for this
 */
+// if (array.includes(flavor)) {
+//   return array.filter(_flavor => _flavor !== flavor);
+// }
+// return array;}
+//==========================================
+// function removeFlavorByName(array,flavor){
+//   let newArray = [...array];
+//   for (let i = 0; i < newArray.length; i++) {
+//     if (newArray.includes(flavor)) {
+//       newArray.splice(i, 1)
+//     }
+//   }
+//   return newArray
+  //-------------------------------------
+   function removeFlavorByName(array,flavor){
+   for (let i = 0; i < array.length; i++){
+    if (array[i] === flavor){
+     array.splice(i,1);
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+     }
+  }
+ return array;
 }
+
+console.log(removeFlavorByName(originalFlavors,'Rocky Road'));
 
 
 
